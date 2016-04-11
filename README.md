@@ -6,6 +6,8 @@ About Font Awesome: [http://fontawesome.io/](http://fontawesome.io/)
 
 Thanks everyone for the awesome gift!
 
+This project is tested under: Qt 4.8.6 and FontAwesome 4.5.0
+
 ## Usage
 
 * all your need are placed under **'fa-qml'**, copy it to your project
@@ -14,7 +16,7 @@ Thanks everyone for the awesome gift!
 
 ### Example
 
-This example is written in Qt4.8 with QtQuick1.1. You may need to do some modification if you are using different version of Qt.
+This example is written in Qt4.8 with QtQuick1.1. You may need to do some modifications if you are using different version of Qt.
 
 ```qml
 
