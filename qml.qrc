@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>fa-qml/Icon.qml</file>
+        <file>fa-qml/Loader.qml</file>
+    </qresource>
+</RCC>
