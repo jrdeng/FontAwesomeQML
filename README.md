@@ -33,13 +33,13 @@ Rectangle {
     }
 
     Awesome.Icon {
+        id: awesomeIcon
         anchors.centerIn: parent
-
-        color: "red"
-        size: 48
-        icon: awesome.fa_at
+        color: "green"
+        icon: awesome.fa_envira
     }
 }
+
 
 ```
 
