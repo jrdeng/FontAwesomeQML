@@ -21,7 +21,7 @@ try:
             break
         if 'fa fa-fw' in inline:
             # get unicode of fa icon
-            pattern = re.compile(r'.*<i class="fa fa-fw">&#x(.*)</i>$')
+            pattern = re.compile(r'.*<i class="fa fa-fw".*>&#x(.*)</i>$')
             match = pattern.match(inline)
             if match:
                 fa_unicode = match.group(1)
@@ -43,7 +43,7 @@ try:
     outfile.write("import QtQuick 1.1\n\n")
     outfile.write("FontLoader {\n")
     # modify this line if you are using other version of Font Awesome
-    outfile.write("    // Font Awesome 4.5.0\n")
+    outfile.write("    // Font Awesome 4.6.1\n")
     
     for fa_name, fa_unicode in items:
         # for QtQuick 2.0, you can add a 'readonly' flag

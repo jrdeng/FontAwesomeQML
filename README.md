@@ -6,7 +6,7 @@ About Font Awesome: [http://fontawesome.io/](http://fontawesome.io/)
 
 Thanks everyone for the awesome gift!
 
-This project is tested under: Qt 4.8.6 and FontAwesome 4.5.0
+This project is tested under: Qt 4.8.6 and FontAwesome 4.6.1
 
 ## Usage
 
