@@ -49,15 +49,12 @@ Rectangle {
 
 ## More
 
-There are two files you may not use under 'fa-qml':
+There is a Python script you maybe interest in:
 
-1. fa-cheatsheet.html
-2. fa-qml-gen.py
+	fa-qml-gen.py
 
-These two files are used to generate the 'Loader.qml', which maintains the mapping between "fa icon name" and the unicode value. 
+This file is used to generate the 'Loader.qml'(with header 'import QtQuick 1.1'), which maintains the mapping between "fa icon name" and the unicode value. You should modify it if you are using other version of Qt.
 
-See also: [http://fontawesome.io/cheatsheet/](http://fontawesome.io/cheatsheet/) (actually, "fa-cheatsheet.html" is the source code of this page)
-
-You can modify them if you are using other version of Font Awesome or Qt.
+See also: [http://fontawesome.io/cheatsheet/](http://fontawesome.io/cheatsheet/) 
 
 Have fun!
