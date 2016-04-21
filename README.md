@@ -4,7 +4,7 @@ A FontAwesome wrapper for QML(Qt Quick)
 
 About Font Awesome: [http://fontawesome.io/](http://fontawesome.io/)
 
-Thanks everyone for the awesome gift!
+Thank everyone for the awesome gift!
 
 This project is tested under: Qt 4.8.6 and FontAwesome 4.6.1
 
