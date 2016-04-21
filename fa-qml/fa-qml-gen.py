@@ -3,13 +3,40 @@
 
 import sys
 import re
+import httplib
+import os
 
-if len(sys.argv) != 2:
-    print "Usage:", sys.argv[0], "fa-cheatsheet.html"
+
+qml_file_name = "Loader.qml"
+version = ""
+
+### get font awesome cheatsheet from http://fontawesome.io/cheatsheet/
+html_file_name = "cheatsheet.html"
+http_client = None
+html_file = open(html_file_name, "w")
+try:
+    http_client = httplib.HTTPConnection('fontawesome.io')
+    http_client.request('GET', '/cheatsheet/')
+    response = http_client.getresponse()
+    if response.status != 200:
+        print "ERROR: can not GET http://fontawesome.io/cheatsheet/ please check your connection..."
+        exit()
+
+    html_source = response.read()
+    html_file.write(html_source)
+    
+except Exception, e:
+    print e
     exit()
+finally:
+    if http_client:
+        http_client.close()
+    html_file.close()
 
-infile = open(sys.argv[1], "r")
-outfile = open("Loader.qml", "w")
+
+### read html and parse icons table
+infile = open(html_file_name, "r")
+outfile = open(qml_file_name, "w")
 dict = {}
 
 # read
@@ -19,6 +46,11 @@ try:
         if not inline:
             print "EOF"
             break
+        if 'page-header' in inline:
+            pattern = re.compile(r'.*Every Font Awesome (.*) Icon.*')
+            match = pattern.match(inline)
+            if match:
+                version = match.group(1)
         if 'fa fa-fw' in inline:
             # get unicode of fa icon
             pattern = re.compile(r'.*<i class="fa fa-fw".*>&#x(.*)</i>$')
@@ -31,8 +63,13 @@ try:
 
                 # save in dict
                 dict[fa_name] = fa_unicode
+                
+except Exception, e:
+    print e
+    exit()
 finally:
     infile.close()
+    os.remove(html_file_name)
 
 items = dict.items()
 items.sort()
@@ -43,7 +80,7 @@ try:
     outfile.write("import QtQuick 1.1\n\n")
     outfile.write("FontLoader {\n")
     # modify this line if you are using other version of Font Awesome
-    outfile.write("    // Font Awesome 4.6.1\n")
+    outfile.write("    // Font Awesome {0}\n".format(version))
     
     for fa_name, fa_unicode in items:
         # for QtQuick 2.0, you can add a 'readonly' flag
@@ -51,6 +88,10 @@ try:
         outfile.write(outline)
     
     outfile.write("}\n")
+    
+except Exception, e:
+    print e
+    exit()
 finally:
     outfile.close()
     print "DONE"
