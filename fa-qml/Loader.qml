@@ -1,7 +1,7 @@
 import QtQuick 1.1
 
 FontLoader {
-    // Font Awesome 4.6.1
+    // Font Awesome 4.6.2
     property string fa_500px: "\uf26e"
     property string fa_adjust: "\uf042"
     property string fa_adn: "\uf170"
@@ -265,6 +265,7 @@ FontLoader {
     property string fa_fire: "\uf06d"
     property string fa_fire_extinguisher: "\uf134"
     property string fa_firefox: "\uf269"
+    property string fa_first_order: "\uf2b0"
     property string fa_flag: "\uf024"
     property string fa_flag_checkered: "\uf11e"
     property string fa_flag_o: "\uf11d"
@@ -473,8 +474,9 @@ FontLoader {
     property string fa_photo: "\uf03e"
     property string fa_picture_o: "\uf03e"
     property string fa_pie_chart: "\uf200"
-    property string fa_pied_piper: "\uf1a7"
+    property string fa_pied_piper: "\uf2ae"
     property string fa_pied_piper_alt: "\uf1a8"
+    property string fa_pied_piper_pp: "\uf1a7"
     property string fa_pinterest: "\uf0d2"
     property string fa_pinterest_p: "\uf231"
     property string fa_pinterest_square: "\uf0d3"
@@ -513,6 +515,7 @@ FontLoader {
     property string fa_repeat: "\uf01e"
     property string fa_reply: "\uf112"
     property string fa_reply_all: "\uf122"
+    property string fa_resistance: "\uf1d0"
     property string fa_retweet: "\uf079"
     property string fa_rmb: "\uf157"
     property string fa_road: "\uf018"
@@ -627,6 +630,7 @@ FontLoader {
     property string fa_th: "\uf00a"
     property string fa_th_large: "\uf009"
     property string fa_th_list: "\uf00b"
+    property string fa_themeisle: "\uf2b2"
     property string fa_thumb_tack: "\uf08d"
     property string fa_thumbs_down: "\uf165"
     property string fa_thumbs_o_down: "\uf088"
@@ -720,6 +724,7 @@ FontLoader {
     property string fa_yc_square: "\uf1d4"
     property string fa_yelp: "\uf1e9"
     property string fa_yen: "\uf157"
+    property string fa_yoast: "\uf2b1"
     property string fa_youtube: "\uf167"
     property string fa_youtube_play: "\uf16a"
     property string fa_youtube_square: "\uf166"
